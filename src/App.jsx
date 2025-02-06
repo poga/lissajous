@@ -16,7 +16,7 @@ function App() {
     const { name, value } = e.target
     setParams(prev => ({
       ...prev,
-      [name]: parseFloat(value)
+      [name]: name === 'color' ? value : parseFloat(value)
     }))
   }
 
